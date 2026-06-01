@@ -10,9 +10,33 @@
 		EF80EB362FCDA98700FF5C08 /* CarnetDeVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarnetDeVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EF80EB492FCDB5E600FF5C08 /* Exceptions for "CarnetDeVoyage" folder in "CarnetDeVoyage" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				.gitignore,
+			);
+			target = EF80EB352FCDA98700FF5C08 /* CarnetDeVoyage */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		EF80EB4A2FCDB5E600FF5C08 /* Exceptions for "CarnetDeVoyage" folder in "Compile Sources" phase from "CarnetDeVoyage" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = EF80EB322FCDA98700FF5C08 /* Sources */;
+			membershipExceptions = (
+				.gitignore,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EF80EB382FCDA98700FF5C08 /* CarnetDeVoyage */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EF80EB492FCDB5E600FF5C08 /* Exceptions for "CarnetDeVoyage" folder in "CarnetDeVoyage" target */,
+				EF80EB4A2FCDB5E600FF5C08 /* Exceptions for "CarnetDeVoyage" folder in "Compile Sources" phase from "CarnetDeVoyage" target */,
+			);
 			path = CarnetDeVoyage;
 			sourceTree = "<group>";
 		};
