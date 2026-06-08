@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct AddPlace: View {
+
+    @Environment(\.dismiss)
+    private var dismiss
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        NavigationStack {
+            Form {
+                TextField(
+                    "Ville",
+                    text: .constant("")
+                )
+                TextField(
+                    "Pays",
+                    text: .constant("")
+                )
+            }
+            .navigationTitle("Ajouter un lieu")
+            .toolbar {
+                ToolbarItem(
+                    placement: .topBarLeading
+                ) {
+                    Button("Fermer") {
+                        dismiss()
+                    }
+                }
+            }
+        }
     }
 }
 

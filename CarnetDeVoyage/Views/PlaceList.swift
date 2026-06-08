@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PlaceListView: View {
     
+    @State private var showAddPlace = false
+    
     let places = Place.examples
     
     var body: some View {
@@ -38,7 +40,19 @@ struct PlaceListView: View {
                     }
                 }
             }
-            .navigationTitle("Carnet de voyage")
+            .navigationTitle("Mes voyages")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showAddPlace = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+            .sheet(isPresented: $showAddPlace) {
+                    AddPlace()
+                    }
+                }
+            }
         }
     }
 }
