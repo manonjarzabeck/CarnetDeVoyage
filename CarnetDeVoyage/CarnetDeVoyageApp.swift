@@ -11,7 +11,7 @@ import SwiftUI
 struct CarnetDeVoyageApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PlaceListView()
         }
     }
 }
