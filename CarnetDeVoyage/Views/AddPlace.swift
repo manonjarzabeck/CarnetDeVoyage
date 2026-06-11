@@ -41,14 +41,10 @@ struct AddPlace: View {
                     "Déjà visité",
                     isOn: $visited
                 )
-                Text("Note : \(rating)/5")
-                Slider(
-                    value: Binding(
-                        get: { Double(rating) },
-                        set: { rating = Int($0) }
-                    ),
-                    in: 0...5,
-                    step: 1
+                Stepper(
+                    "Note : \(rating)",
+                    value: $rating,
+                    in: 0...5
                 )
             }
             .navigationTitle("Ajouter un lieu")
@@ -71,7 +67,9 @@ struct AddPlace: View {
                             famousFood: famousFood,
                             imageName: "placeholder"
                         )
-                        places.append(newPlace)
+                        withAnimation {
+                            places.append(newPlace)
+                        }
                         dismiss()
                     }.fontWeight(.bold)
                 }
